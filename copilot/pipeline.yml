@@ -1,0 +1,27 @@
+# This YAML file defines the relationship and deployment ordering of your environments.
+
+# The name of the pipeline
+name: pipeline-sample-huanjani-ecs-demo-php-simple-app
+
+# The version of the schema used in this template
+version: 1
+
+# This section defines the source artifacts.
+source:
+  # The name of the provider that is used to store the source artifacts.
+  provider: GitHub
+  # Additional properties that further specifies the exact location
+  # the artifacts should be sourced from. For example, the GitHub provider
+  # has the following properties: repository, branch.
+  properties:
+    access_token_secret: github-token-sample-ecs-demo-php-simple-app
+    branch: master
+    repository: https://github.com/huanjani/ecs-demo-php-simple-app
+
+# The deployment section defines the order the pipeline will deploy
+# to your environments.
+stages:
+    - # The name of the environment to deploy to.
+      name: test
+    - # Commands to run a set of tests for your service in this stage.
+      test_commands:
