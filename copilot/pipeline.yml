@@ -23,5 +23,3 @@ source:
 stages:
     - # The name of the environment to deploy to.
       name: test
-    - # Commands to run a set of tests for your service in this stage.
-      test_commands:
