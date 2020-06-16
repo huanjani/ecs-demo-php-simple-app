@@ -23,5 +23,7 @@ source:
 stages:
     - # The name of the environment to deploy to.
       name: test
+      test_commands: [echo README.md]
     -
-      name: prod	
+      name: prod
+      test_commands: [echo "one", echo "two"]	
