@@ -23,7 +23,11 @@ source:
 stages:
     - # The name of the environment to deploy to.
       name: test
-      test_commands: [cat README.md]
-    -
+      # Optional: use test commands to validate this stage of your build.
+      test_commands: [echo 'running tests', cat NOTICE.md]
+
+    - # The name of the environment to deploy to.
       name: prod
-      test_commands: [echo 'one', echo 'two]	
+      # Optional: use test commands to validate this stage of your build.
+      test_commands: [echo 'next test']
+
