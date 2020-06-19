@@ -24,10 +24,10 @@ stages:
     - # The name of the environment to deploy to.
       name: test
       # Optional: use test commands to validate this stage of your build.
-      # test_commands: [echo 'running tests', cat NOTICE.md]
+        test_commands: [echo 'running tests', make test]
 
     - # The name of the environment to deploy to.
       name: prod
       # Optional: use test commands to validate this stage of your build.
-      test_commands: [echo 'next test']
+      # test_commands: [echo 'running tests', make test]
 
